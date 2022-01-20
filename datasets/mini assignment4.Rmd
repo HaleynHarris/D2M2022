@@ -1,0 +1,37 @@
+---
+title: "Mini Assignment 4"
+author: "Haley Harris"
+date: "1/20/2022"
+output: html_document
+---
+
+```{r}
+library(readxl)
+mmdata<- read_excel("MM Data.xlsx", skip= 1)
+```
+
+```{r}
+library(tidyverse)
+mmdata.long <-mmdata %>%
+  pivot_longer(cols = c("Red", "Green","Blue", "Orange","Yellow", "Brown"),names_to = "Color",values_to = "Number")
+mmdata.long
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
